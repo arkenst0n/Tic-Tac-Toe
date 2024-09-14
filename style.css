@@ -20,10 +20,11 @@ section {
     justify-content: center;
     align-items: center;
     background-color: aliceblue;
-    height: 60vh; /* Відсотки від висоти вікна */
-    width: 50vw; /* Відсотки від ширини вікна */
+    height: auto;
+    width: 50vw;
     max-width: 400px; /* Максимальна ширина */
-    margin-top: 10vh; /* Відступ зверху */
+    margin-top: 20vh; /* Відступ зверху */
+    padding: 5vh 0 5vh 0;
     border-radius: 5%;
     box-shadow: 6px 6px 6px orange;
 }
@@ -39,7 +40,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 60%; /* Відсотки від секції */
-    height: 60%;
+    aspect-ratio: 1 / 1; /* Зберігає квадратне співвідношення сторін */
     gap: 0;
 }
 
@@ -47,7 +48,7 @@ h1 {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid #000000;
 }
 
 .cell:nth-child(1),
@@ -93,16 +94,16 @@ h1 {
 @media (max-width: 480px) {
     section {
         width: 80vw;
-        height: 70vh;
+        height: auto;
     }
 
     h1 {
-        font-size: 6vw;
+        font-size: 3vw;
     }
 
     .game-board {
         width: 70%;
-        height: 70%;
+        aspect-ratio: 1 / 1; /* Квадратна форма */
     }
 
     .reset {
